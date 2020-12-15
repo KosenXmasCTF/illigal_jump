@@ -1,0 +1,5 @@
+# illigal jump writeup
+
+setjmpで作られたスコープ以上にの所にlongjmpしている。setjmpはスタックポインタなども強制的に戻してしまうので、nameを使ってスタックをいじり放題になる。
+また、StackProtectorも切ってあり、更に静的なバイナリを生成しているので、初心者でも簡単にROPを構成できるはず。
+
