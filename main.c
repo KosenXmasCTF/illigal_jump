@@ -35,6 +35,8 @@ void menu() {
 }
 
 int main() {
+	alarm(60);
+
 	while(1) {
 		int opt;
 		menu();
