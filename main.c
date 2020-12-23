@@ -35,13 +35,15 @@ void menu() {
 }
 
 int main() {
+  setvbuf(stdin, NULL, _IONBF, 0);
+  setvbuf(stdout, NULL, _IONBF, 0);
 	alarm(60);
 
 	while(1) {
 		int opt;
 		menu();
-		printf("Enter option:"); fflush(stdout);
-		scanf("%d", &opt); 
+		printf("Enter option:");
+		scanf("%d%*c", &opt); 
 		switch(opt) {
 			case 1: {
 				set_buffer();
